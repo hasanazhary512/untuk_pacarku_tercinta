@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Datang</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to top, #a1c4fd, #c2e9fb);
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            animation: bounceIn 1.5s ease-in-out infinite;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .message {
+            font-size: 3em;
+            color: #ff7e5f;
+            text-shadow: 2px 2px #ff9a9e;
+            margin: 0;
+            animation: colorChange 4s linear infinite;
+        }
+
+        .heart {
+            color: #ff7e5f;
+            font-size: 2em;
+            display: inline-block;
+            animation: heartbeat 1s infinite;
+        }
+
+        .sticker {
+            margin-top: 20px;
+            width: 150px; /* Adjust size as needed */
+            height: auto;
+        }
+
+        .sticker-caption {
+            font-size: 1.2em;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .link-button {
+            font-size: 1.5em;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #ff7e5f;
+            padding: 10px 20px;
+            border-radius: 25px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-button:hover {
+            background-color: #fcb045;
+        }
+
+        .link-button:before {
+            content: "✨";
+            font-size: 1.5em;
+            position: absolute;
+            top: 0;
+            left: -10px;
+            animation: sparkle 1s linear infinite;
+            color: #ffffff;
+            opacity: 0.8;
+        }
+
+        .link-button:after {
+            content: "✨";
+            font-size: 1.5em;
+            position: absolute;
+            bottom: 0;
+            right: -10px;
+            animation: sparkle 1s linear infinite;
+            animation-delay: 0.5s;
+            color: #ffffff;
+            opacity: 0.8;
+        }
+
+        @keyframes colorChange {
+            0% { color: #ff7e5f; }
+            25% { color: #ff9a9e; }
+            50% { color: #fcb045; }
+            75% { color: #fd1d1d; }
+            100% { color: #ff7e5f; }
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+
+        @keyframes bounceIn {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes sparkle {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.5); }
+        }
+
+        /* Hujan love */
+        .love-rain {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            font-size: 2em;
+            animation: fall 5s infinite;
+            z-index: 1;
+        }
+
+        @keyframes fall {
+            0% {
+                top: -10%;
+                opacity: 0.7;
+            }
+            100% {
+                top: 100%;
+                opacity: 0;
+            }
+        }
+
+        .love-rain:nth-child(odd) {
+            animation-duration: 6s;
+            left: 30%;
+            animation-delay: -3s;
+        }
+
+        .love-rain:nth-child(even) {
+            animation-duration: 7s;
+            left: 70%;
+            animation-delay: -2s;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Hujan love -->
+    <div class="love-rain">❤️</div>
+    <div class="love-rain">❤️</div>
+    <div class="love-rain">❤️</div>
+    <div class="love-rain">❤️</div>
+    <div class="love-rain">❤️</div>
+
+    <div class="container">
+        <p class="message">Selamat Malam, Dek Engga Dewiku Sayang!  <span class="heart">❤️</span></p>
+        <!-- Stiker GIF -->
+        <img src="stiker1.gif" alt="Stiker" class="sticker">
+        <!-- Teks di bawah stiker -->
+        <p class="sticker-caption">Gimana Hari ini Dek? lancar?🥰</p>
+    </div>
+    <div class="button-container">
+        <a href="hasan2.html" class="link-button">Klik di sini</a>
+    </div>
+</body>
+</html>

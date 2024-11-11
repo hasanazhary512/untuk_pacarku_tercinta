@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terima Kasih</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .thank-you-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #ff6f61;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .back-home-btn {
+            font-size: 1.2em;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #ff6f61;
+            padding: 10px 25px;
+            border-radius: 25px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            cursor: pointer;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .back-home-btn:hover {
+            background-color: #ff9a76;
+            transform: scale(1.05);
+        }
+
+        /* Love Heart Positioning */
+        .love-top-left {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 2.5em;
+            color: #ff6f61;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        .love-bottom-right {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 2.5em;
+            color: #ff6f61;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <h1>Terima Kasih</h1>
+        <p>
+            Terima kasih sudah membaca pesan dari Mas. Semoga kita bisa terus bersama, saling mendukung, dan bahagia bersama-sama hingga akhir hayat. 💖
+        </p>
+        <a href="https://api.whatsapp.com/send?phone=6285746010423&text=I%20Love%20U%20Mas%20Sayang%E2%9D%A4%2C%20Beri%20Pesan%20Singkat%20Untuk%20Mas%20:" class="back-home-btn" target="_blank">Kirim Pesan Buat Mas</a>
+
+        <!-- Love Icons inside the thank-you-container -->
+        <div class="love-top-left">💖</div>
+        <div class="love-bottom-right">💖</div>
+    </div>
+</body>
+</html>

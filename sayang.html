@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinta Tulus</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .message-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeIn 1.5s ease-in-out;
+            color: #ff6f61;
+            text-shadow: 1px 1px #ff9a9e;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .sticker {
+            width: 100px;
+            height: auto;
+            margin: 20px 0; /* Adjust the spacing above and below */
+        }
+
+        .link {
+            font-size: 1.2em;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #ff6f61;
+            padding: 15px 30px;
+            border-radius: 25px;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .link:hover {
+            background-color: #ff9a76;
+            transform: scale(1.1);
+        }
+
+        .hearts {
+            display: inline-flex;
+            gap: 5px;
+            font-size: 1.2em;
+            animation: rotateHearts 2s linear infinite;
+        }
+
+        @keyframes rotateHearts {
+            0% { transform: rotate(0deg); }
+            50% { transform: rotate(360deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Falling Hearts */
+        .heart {
+            position: absolute;
+            top: -10%;
+            font-size: 1.5em;
+            color: #ff6f61;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="message-container">
+        <h1>Makasih Dek sudah mau bersama sampai sekarang, Semoga kita bisa terus bertahan sampai tua🥰</h1>
+        <p>Mas ada Pesan buat Adek Sayang, Dibaca Ya</p>
+        
+        <!-- Stiker -->
+        <img src="stiker3.gif" alt="Stiker Cinta" class="sticker">
+        
+        <a href="pesan.html" class="link">
+            <span class="hearts">💖💞💖</span>
+            Baca Pesan Dari Mas
+            <span class="hearts">💖💞💖</span>
+        </a>
+        
+    </div>
+
+    <!-- Falling Hearts -->
+    <script>
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+            heart.innerHTML = "💖";
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
